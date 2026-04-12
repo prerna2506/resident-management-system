@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite client",
-    "build": "vite build client",
-    "lint": "eslint client",
-    "preview": "vite preview client"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "body-parser": "^2.2.2",

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-# React + Vite
+This project is a full-stack Resident Management System designed to streamline communication, event tracking, and maintenance management within a residential community.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# resident-management-system
-Full-stack Resident Management Dashboard with real-time updates, AI assistance, and scalable backend architecture.
->>>>>>> 727179c10198391c54689c93e9936ce0bea62f5d
+It combines a modern frontend dashboard with a robust backend to deliver a seamless and scalable user experience.
