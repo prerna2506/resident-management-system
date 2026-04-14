@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Toaster, toast } from 'react-hot-toast';
 import { FaHome, FaBullhorn, FaTools, FaMoneyBillWave, FaUser, FaCheckCircle, FaClock, FaSignOutAlt, FaRocket, FaPlayCircle } from 'react-icons/fa';
