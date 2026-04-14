@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Toaster, toast } from 'react-hot-toast';
 import { FaHome, FaBullhorn, FaTools, FaMoneyBillWave, FaUser, FaCheckCircle, FaClock, FaSignOutAlt, FaRocket, FaPlayCircle } from 'react-icons/fa';
@@ -77,9 +77,9 @@ function Sidebar({ currentView, setCurrentView, onLogout }) {
       </div>
       <ul className="sidebar-menu">
         {menuItems.map(item => (
-           <li key={item.id} className={currentView === item.id ? 'active' : ''} onClick={() => setCurrentView(item.id)}>
-             {item.icon} {item.label}
-           </li>
+          <li key={item.id} className={currentView === item.id ? 'active' : ''} onClick={() => setCurrentView(item.id)}>
+            {item.icon} {item.label}
+          </li>
         ))}
       </ul>
       <div className="sidebar-footer" onClick={onLogout}>
@@ -122,12 +122,12 @@ function DashboardContent() {
           </div>
         </motion.div>
       </div>
-      
+
       {/* Rest of the Dashboard charts or lists could go here */}
       <div className="recent-activity">
         <h3>Recent Activity</h3>
         <div className="activity-placeholder">
-           <p className="text-muted">Your society is running smoothly today.</p>
+          <p className="text-muted">Your society is running smoothly today.</p>
         </div>
       </div>
     </motion.div>
@@ -141,30 +141,30 @@ function ComplaintsContent() {
   ]);
 
   const handleRaiseComplaint = () => {
-     toast.success("Complaint Submitted Successfully!");
-     setComplaints([{ id: Date.now(), title: 'New demo complaint', status: 'Pending', date: 'Oct 24, 2024' }, ...complaints]);
+    toast.success("Complaint Submitted Successfully!");
+    setComplaints([{ id: Date.now(), title: 'New demo complaint', status: 'Pending', date: 'Oct 24, 2024' }, ...complaints]);
   };
 
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
       <div className="flex-between mb-24">
-         <h2>Complaint System</h2>
-         <button className="btn-primary" onClick={handleRaiseComplaint}>Raise Complaint</button>
+        <h2>Complaint System</h2>
+        <button className="btn-primary" onClick={handleRaiseComplaint}>Raise Complaint</button>
       </div>
 
       <div className="card list-wrapper">
         {complaints.map(c => (
-           <div key={c.id} className="list-item">
-             <div className="list-item-main">
-               <h4>{c.title}</h4>
-               <span className="text-muted"><FaClock style={{display: 'inline', marginRight: 4, verticalAlign: 'middle'}}/> {c.date}</span>
-             </div>
-             <div>
-               <span className={`status-badge ${c.status.toLowerCase()}`}>
-                 {c.status === 'Resolved' ? <FaCheckCircle /> : ''} {c.status}
-               </span>
-             </div>
-           </div>
+          <div key={c.id} className="list-item">
+            <div className="list-item-main">
+              <h4>{c.title}</h4>
+              <span className="text-muted"><FaClock style={{ display: 'inline', marginRight: 4, verticalAlign: 'middle' }} /> {c.date}</span>
+            </div>
+            <div>
+              <span className={`status-badge ${c.status.toLowerCase()}`}>
+                {c.status === 'Resolved' ? <FaCheckCircle /> : ''} {c.status}
+              </span>
+            </div>
+          </div>
         ))}
       </div>
     </motion.div>
@@ -175,8 +175,8 @@ function PaymentsContent() {
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
       <h2>Payments</h2>
-      <div className="card flex-center empty-state mt-24" style={{marginTop: 24}}>
-         Payment module coming soon...
+      <div className="card flex-center empty-state mt-24" style={{ marginTop: 24 }}>
+        Payment module coming soon...
       </div>
     </motion.div>
   );
@@ -186,8 +186,8 @@ function NoticesContent() {
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
       <h2>Notices</h2>
-      <div className="card flex-center empty-state mt-24" style={{marginTop: 24}}>
-         Notices module coming soon...
+      <div className="card flex-center empty-state mt-24" style={{ marginTop: 24 }}>
+        Notices module coming soon...
       </div>
     </motion.div>
   );
@@ -220,20 +220,20 @@ export default function App() {
 
   return (
     <div className="app-layout">
-      <Toaster position="top-right" toastOptions={{ className: 'custom-toast' }}/>
-      
-      <Sidebar 
-        currentView={currentView} 
-        setCurrentView={setCurrentView} 
-        onLogout={() => { setRole(null); setCurrentView('dashboard'); toast.success('Logged out'); }} 
+      <Toaster position="top-right" toastOptions={{ className: 'custom-toast' }} />
+
+      <Sidebar
+        currentView={currentView}
+        setCurrentView={setCurrentView}
+        onLogout={() => { setRole(null); setCurrentView('dashboard'); toast.success('Logged out'); }}
       />
-      
+
       <main className="main-content">
         <header className="topbar">
           <h1 className="page-title">{capitalize(currentView)}</h1>
           <div className="user-profile">
-             <div className="avatar"><FaUser /></div>
-             <span className="user-name">{role === 'admin' ? 'Admin User' : 'Resident'}</span>
+            <div className="avatar"><FaUser /></div>
+            <span className="user-name">{role === 'admin' ? 'Admin User' : 'Resident'}</span>
           </div>
         </header>
 
